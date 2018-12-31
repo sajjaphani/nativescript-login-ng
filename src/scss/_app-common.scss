@@ -1,0 +1,171 @@
+// Import the theme’s variables. If you’re using a color scheme
+// other than “light”, switch the path to the alternative scheme,
+// for example '~nativescript-theme-core/scss/dark'.
+@import '~nativescript-theme-core/scss/light';
+
+// Customize any of the theme’s variables here, for instance $btn-color: red;
+
+// Import the theme’s main ruleset.
+@import '~nativescript-theme-core/scss/index';
+
+// Place any CSS rules you want to apply on both iOS and Android here.
+// This is where the vast majority of your CSS code goes.
+
+@import './mixins/index';
+
+.action-bar {
+  background-color: rgba(8, 25, 33, 0.45);
+  color: #FFFFFF;
+}
+
+.page {
+  background-color: #103241;  
+}
+
+.fa {
+    font-family: "FontAwesome";
+}
+
+.font-size-sm {
+  font-size: 12;
+}
+
+.font-size-sm-tablet {
+  font-size: 17;
+}
+
+.font-size-md {
+  font-size: 14;
+}
+
+.font-size-md-tablet {
+  font-size: 19;
+}
+
+.font-size-lg {
+  font-size: 16;
+}
+
+.font-size-lg-tablet {
+  font-size: 21;
+}
+
+.login-page-background {
+  background-color: #103241;
+}
+
+.copyright-label {
+    text-align: center;
+    opacity: .6;
+    color: #A5A5A5;
+  }
+
+  .container-padding {
+    padding-left: 50;
+    padding-right: 50;
+    padding-top: 20;
+  }
+
+  .login-input-field {
+    color:#527796;
+    border-width: 1;
+    border-radius: 4;
+    border-color:#FFFFFF;
+    background-color:#FFFFFF;
+    placeholder-color: rgba(16, 50, 65, .45);
+    vertical-align: middle;
+  }
+  
+  .login-password-container {
+    color:#527796;
+    border-width: 1;
+    border-radius: 4;
+    border-color:#FFFFFF;
+    background-color:#FFFFFF;
+    vertical-align: middle;
+  }
+
+  .login-password-field {
+    color:#527796;
+    border-bottom-width: 1;
+    border-bottom-color: transparent;
+    placeholder-color: rgba(16, 50, 65, .45);
+    vertical-align: middle;
+  }
+
+  .login-submit {
+    border-width: 1;
+    border-radius: 4;
+    border-color:rgba(2, 133, 46, 1);
+    background-color:rgba(2, 133, 46, 1);
+    color:#FFFFFF;
+    padding-top:10;
+    padding-bottom: 10;
+    text-transform: none;
+  }
+  
+  .login-forgot-password {
+    color: #FFFFFF;
+  }
+  
+  .login-submit-top {
+    margin-top: 35;
+  }
+
+  .login-submit:disabled {
+    color:#FFFFFF;
+    opacity: .6;
+  }
+
+  .login-field-label {
+    color: #3DB7D8;
+  }
+
+  .input-field-error {
+    border-width: 2;
+    border-color: rgba(253, 60, 67, .8);
+  }
+
+  .submit-container {
+    padding-top: 40;
+  }
+
+  .color-danger {
+    color: rgba(253, 60, 67, .8);
+  }
+
+  .show-hide-icon {
+    color: #527796;
+  }
+
+  // New
+  .logo-container {
+    clip-path: ellipse(70% 80% at 50% 20%); 
+    background-color: rgba(8, 25, 33, 0.45);
+  }
+
+  .image-container {
+    width: 33%;
+    opacity: 1;
+  }
+
+  .activity-indicator {
+    color: yellow;
+    width: 100;
+    height: 100;
+    padding: 10;
+    margin: 10;
+  }
+
+  .login-page-tablet {
+    width: 60%;
+  }
+
+  .home-page-tablet {
+    width: 60%;
+  }
+
+  .fa-logout {
+    font-size: 20; 
+    color: rgb(184, 22, 22);
+  }

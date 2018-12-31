@@ -1,0 +1,30 @@
+@import './scss/app-common';
+
+@import '~nativescript-theme-core/scss/platforms/index.ios';
+
+// Place any CSS rules you want to apply only on iOS here
+
+$opensans-font-family: 'Open Sans';
+
+// Fonts from mixins
+
+.eloha-font-light {
+    @include eloha-font($opensans-font-family, 300);
+}
+
+.eloha-font-regular {
+    @include eloha-font($opensans-font-family, 400);
+}
+
+.eloha-font-semibold {
+    @include eloha-font($opensans-font-family, 600);
+}
+
+.eloha-font-bold {
+    @include eloha-font($opensans-font-family, 700);
+}
+
+// Additional Styles for ios only
+.login-input-field, .login-password-container {
+    padding: 10;
+}

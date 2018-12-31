@@ -1,0 +1,49 @@
+<!--
+The template defines the view of the component - what is actually rendered.
+In NativeScript applications the template is defined with XML using NativeScript UI elements.
+It is different from HTML. So instead of <input>, <span>, <div> etc. - we have <TextField>, <Label> and layouts.
+The important thing is that although the elements are different - all of the Angular’s template syntax works exactly the same.
+So you can still use template expressions, bindings, templates as well as all the built-in directives.
+-->
+
+<!--
+The ActionBar is the NativeScript common abstraction over the Android ActionBar and iOS NavigationBar.
+http://docs.nativescript.org/ui/action-bar
+-->
+<ActionBar title="My App" class="action-bar" android:style="padding-top:20" flat="true">
+    <ActionItem ios.position="right" (tap)="logout()">
+        <StackLayout>
+            <Label text="&#xf08b;" class="fa fa-logout" android:style="padding-right:10"></Label>
+        </StackLayout>
+    </ActionItem>
+</ActionBar>
+<GridLayout rows="*">
+    <GridLayout row="0" rows="auto" rows="*">
+        <ActivityIndicator color="white" [busy]="isLoading" horizontalAlignment="center" verticalAlignment="center"></ActivityIndicator>
+    </GridLayout>
+    <GridLayout row="0" rows="auto, auto, auto" [ngClass]="{'login-page-tablet': isTablet()}">
+        <StackLayout row="0" class="p-10">
+            <Label class="eloha-font-bold" text="Configure Kinvey"></Label>
+            <Label class="eloha-font-semibold" text="Open 'app.config.ts' file and configure your kinvey app with"
+                textWrap="true"></Label>
+            <Label class="eloha-font-regular" text="appKey: 'Your app key'"></Label>
+            <Label class="eloha-font-regular" text="appSecret: 'Your app sectet'"></Label>
+        </StackLayout>
+        <StackLayout row="1" class="p-10">
+            <Label class="eloha-font-bold" text="Form Features"></Label>
+            <Label class="eloha-font-semibold" text="This sample implements some of the best practices of mobile form design principles including:"
+                textWrap="true"></Label>
+            <Label class="eloha-font-regular" text="Field Labels"></Label>
+            <Label class="eloha-font-regular" text="Show/Hide Password"></Label>
+            <Label class="eloha-font-regular" text="Form Fields Validations"></Label>
+            <Label class="eloha-font-regular" text="Inline Error messages"></Label>
+        </StackLayout>
+        <StackLayout row="2" class="p-10">
+            <Label class="eloha-font-bold" text="Others"></Label>
+            <Label class="eloha-font-semibold" text="This sample has some customizations for tablet compatibility"
+                textWrap="true"></Label>
+            <Label class="eloha-font-regular" text="Font Sizes"></Label>
+            <Label class="eloha-font-regular" text="Fields Size Adjustments"></Label>
+        </StackLayout>
+    </GridLayout>
+</GridLayout>

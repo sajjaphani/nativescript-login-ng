@@ -1,0 +1,6 @@
+@mixin eloha-font($family, $weight:0) {
+    font-family: $family;
+    @if $weight != 0 {
+        font-weight: $weight;
+    }
+}

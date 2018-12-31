@@ -1,0 +1,41 @@
+@import './scss/app-common';
+@import '~nativescript-theme-core/scss/platforms/index.android';
+
+// Place any CSS rules you want to apply only on Android here
+
+.eloha-font-light {
+    @include eloha-font('OpenSans-Light');
+}
+
+.eloha-font-regular {
+    @include eloha-font('OpenSans-Regular');
+}
+
+.eloha-font-semibold {
+    @include eloha-font('OpenSans-SemiBold');
+}
+
+.eloha-font-bold {
+    @include eloha-font('OpenSans-Bold');
+}
+
+// Additional Styles for Android only
+.login-input-field {
+    padding-left: 10;
+    padding-right: 10;
+}
+
+.login-password-field {
+    padding-left: 10;
+}
+
+.show-hide-icon {
+    padding-right: 10;
+}
+
+.login-forgot-password {
+    border-width: 1;
+    background-color: transparent;
+    border-color: transparent;
+    text-transform: none;
+}
