@@ -58,4 +58,14 @@ export class BackendService {
   private set user(theToken: string) {
     setString(_CURRENT_USER, theToken);
   }
+
+  public forgetPassword(email: string) {
+    return Kinvey.User.resetPassword(email)
+      .then((data) => {
+        console.debug('Data', data)
+      })
+      .catch((error: Kinvey.BaseError) => {
+        console.debug('Error', error)
+      });
+  }
 }

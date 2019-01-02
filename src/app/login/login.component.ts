@@ -3,6 +3,7 @@ import { RouterExtensions } from "nativescript-angular/router";
 
 import { TextField } from "ui/text-field/text-field";
 import { Page } from "ui/page";
+import { prompt, inputType } from "ui/dialogs";
 
 import { isAndroid, device } from "platform";
 import * as app from "application";
@@ -184,5 +185,26 @@ export class LoginComponent implements OnInit {
 
   isTablet() {
     return this.utilityService.isTablet();
+  }
+
+  // for this to work, you must configure email field in Kinvey Users
+  forgotPassword() {
+    prompt({
+      title: "Forgot Password",
+      message: "Enter the email address you used to register to reset your password.",
+      defaultText: "",
+      okButtonText: "Ok",
+      cancelButtonText: "Cancel",
+      inputType: inputType.email
+    }).then((data) => {
+      if (data.result) {
+        this.backendService.forgetPassword(data.text.trim())
+          .then(() => {
+            alert("An email has been sent to your email address. Please check your email for instructions on resetting your password.");
+          }, () => {
+            alert("Unfortunately, an error occurred resetting your password.");
+          });
+      }
+    });
   }
 }
