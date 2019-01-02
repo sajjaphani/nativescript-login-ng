@@ -3,7 +3,7 @@ import { RouterExtensions } from "nativescript-angular/router";
 
 import { TextField } from "ui/text-field/text-field";
 import { Page } from "ui/page";
-import { prompt, inputType } from "ui/dialogs";
+import { alert } from "ui/dialogs";
 
 import { isAndroid, device } from "platform";
 import * as app from "application";
@@ -168,7 +168,7 @@ export class LoginComponent implements OnInit {
     if (this.isValidForm()) {
       this.isAuthenticating = true;
       // Use the backend service to login
-      this.backendService.loginWithKinvey(this.user)
+      this.backendService.login(this.user)
         .then(() => {
           this.isAuthenticating = false;
           this.routerExtensions.navigate(["/home"], { clearHistory: true });
@@ -187,24 +187,14 @@ export class LoginComponent implements OnInit {
     return this.utilityService.isTablet();
   }
 
-  // for this to work, you must configure email field in Kinvey Users
+  // You can configure your backend and present appropriate window for recovery.
   forgotPassword() {
-    prompt({
+    alert({
       title: "Forgot Password",
-      message: "Enter the email address you used to register to reset your password.",
-      defaultText: "",
-      okButtonText: "Ok",
-      cancelButtonText: "Cancel",
-      inputType: inputType.email
-    }).then((data) => {
-      if (data.result) {
-        this.backendService.forgetPassword(data.text.trim())
-          .then(() => {
-            alert("An email has been sent to your email address. Please check your email for instructions on resetting your password.");
-          }, () => {
-            alert("Unfortunately, an error occurred resetting your password.");
-          });
-      }
-    });
+      message: "Configure your backend to add a forgot password. Check 'login-kinvey' branch to work with Kinvey backend.",
+      okButtonText: "Close"
+  }).then(function () {
+      console.log("Dialog closed!");
+  });
   }
 }
