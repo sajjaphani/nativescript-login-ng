@@ -4,7 +4,7 @@ This repo is a [NativeScript](https://www.nativescript.org/) application for bui
 
 Below images shows the login screen on iPhone and Android respectively.
 
-<img src="https://raw.githubusercontent.com/sajjaphani/nativescript-login-ng/login-kinvey/screens/login-screen-ios.png" alt="alt text" width="320" height="640">  <img src="https://raw.githubusercontent.com/sajjaphani/nativescript-login-ng/login-kinvey/screens/login-screen-ios.png" alt="alt text" width="320" height="640">
+<img src="https://raw.githubusercontent.com/sajjaphani/nativescript-login-ng/login-kinvey/screens/login-screen-android.png" alt="alt text" width="320" height="640"> <img src="https://raw.githubusercontent.com/sajjaphani/nativescript-login-ng/login-kinvey/screens/login-screen-ios.png" alt="alt text" width="320" height="640">
 
 Below images shows the login screen on iPad and Android Tablet respectively.
 
